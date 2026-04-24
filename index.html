@@ -308,7 +308,7 @@
                 Bishop’s University | Sherbrooke, Canada.
             </p>
             <p style="color: var(--text-muted); font-size: 1.05rem;">
-                I’ve guided and mentored students in interactive, inquiry-based precalculus and calculus courses through the Maple League OLTC program, helping them build confidence, collaboration, and problem-solving skills.
+                I’ve guided and mentored students in interactive, inquiry-based precalculus and calculus courses through the Maple League OLTC program helping them build confidence, collaboration, and problem-solving skills.
             </p>
         </div>
     </section>
@@ -349,3 +349,49 @@
                 <p style="color: var(--text-muted);">per person / hour</p>
                 <button class="btn-secondary" style="margin-top: 1.5rem; width: 100%; margin-left: 0;" onclick="openModal()">Book Group</button>
             </div>
+        </div>
+    </section>
+
+    <section id="contact" class="text-center">
+        <h2>Get in Touch</h2>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">Reach out directly via email or follow me on social media.</p>
+        <a href="mailto:syntropicminds@gmail.com" style="font-size: 1.5rem; color: var(--blue-deep); text-decoration: none; font-weight: 600;">syntropicminds@gmail.com</a>
+        
+        <div class="social-links">
+            <a href="https://instagram.com/syntropicminds" target="_blank">Instagram: @syntropicminds</a>
+            <a href="https://tiktok.com/@syntropicminds8" target="_blank">TikTok: @syntropicminds8</a>
+            <a href="https://youtube.com/@syntropicminds8" target="_blank">YouTube: @syntropicminds8</a>
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="calendarModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <h2>Schedule Your Session</h2>
+            <p style="margin-bottom: 1rem; color: var(--text-muted);">Choose a time that works for you. All sessions are hosted via Zoom.</p>
+            
+            <div class="calendly-inline-widget" data-url="https://calendly.com/syntropicminds/new-meeting?background_color=76baa2&text_color=ffffff&primary_color=ffaf4f" style="min-width:320px;height:700px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            </div>
+    </div>
+
+    <footer>
+        <div class="logo" style="font-size: 1.5rem;">Syntropic<span>Minds</span></div>
+        <div style="color: var(--text-muted); font-size: 0.9rem;">
+            Ana Rodriguez | Syntropic Minds Mentoring
+        </div>
+    </footer>
+
+    <script>
+        function openModal() { document.getElementById('calendarModal').style.display = 'flex'; }
+        function closeModal() { document.getElementById('calendarModal').style.display = 'none'; }
+        
+        window.onclick = function(event) {
+            let modal = document.getElementById('calendarModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
