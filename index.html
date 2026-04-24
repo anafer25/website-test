@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syntropic Minds | Ana Rodriguez Mentoring</title>
+    <title>Syntropic Minds | Math & Physics Mentoring</title>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
@@ -246,33 +246,35 @@
         .modal-overlay {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(5px);
-            display: none;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(8px);
+            display: none; /* Controlled by JS */
             justify-content: center;
             align-items: center;
-            z-index: 1000;
+            z-index: 2000;
         }
         .modal-content {
             background: white;
             padding: 2rem;
             border-radius: 16px;
             width: 95%;
-            max-width: 800px;
+            max-width: 850px;
             max-height: 90vh;
             overflow-y: auto;
             text-align: center;
             position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
         }
         .close-btn {
             position: absolute;
             top: 1rem; right: 1rem;
-            font-size: 2rem;
+            font-size: 2.5rem;
             cursor: pointer;
             color: var(--text-muted);
             border: none;
             background: none;
-            z-index: 10;
+            z-index: 2010;
+            line-height: 1;
         }
     </style>
 </head>
@@ -290,7 +292,6 @@
     </header>
 
     <section id="home" class="hero">
-        <p style="text-transform: uppercase; letter-spacing: 2px; color: var(--gold); font-weight: 600; margin-bottom: 1rem;">Ana Rodriguez Mentoring</p>
         <h1>Integrate Calculus <br>with <span>Intuition.</span></h1>
         <p>Welcome to Syntropic Minds. We go beyond rote memorization to help you master the language of the universe through personalized mentoring in Math and Physics.</p>
         <div>
@@ -358,17 +359,17 @@
         <a href="mailto:syntropicminds@gmail.com" style="font-size: 1.5rem; color: var(--blue-deep); text-decoration: none; font-weight: 600;">syntropicminds@gmail.com</a>
         
         <div class="social-links">
-            <a href="https://instagram.com/syntropicminds" target="_blank">Instagram: @syntropicminds</a>
-            <a href="https://tiktok.com/@syntropicminds8" target="_blank">TikTok: @syntropicminds8</a>
-            <a href="https://youtube.com/@syntropicminds8" target="_blank">YouTube: @syntropicminds8</a>
+            <a href="https://instagram.com/syntropicminds" target="_blank">@syntropicminds</a>
+            <a href="https://tiktok.com/@syntropicminds8" target="_blank">TikTok</a>
+            <a href="https://youtube.com/@syntropicminds8" target="_blank">YouTube</a>
         </div>
     </section>
 
     <div class="modal-overlay" id="calendarModal">
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal()">&times;</button>
-            <h2>Schedule Your Session</h2>
-            <p style="margin-bottom: 1rem; color: var(--text-muted);">Choose a time that works for you. All sessions are hosted via Zoom.</p>
+            <h2 style="margin-bottom: 0.5rem;">Schedule Your Session</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--text-muted);">All sessions are hosted via Zoom.</p>
             
             <div class="calendly-inline-widget" data-url="https://calendly.com/syntropicminds/new-meeting?background_color=76baa2&text_color=ffffff&primary_color=ffaf4f" style="min-width:320px;height:700px;"></div>
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
@@ -383,13 +384,24 @@
     </footer>
 
     <script>
-        function openModal() { document.getElementById('calendarModal').style.display = 'flex'; }
-        function closeModal() { document.getElementById('calendarModal').style.display = 'none'; }
+        const modal = document.getElementById('calendarModal');
+
+        function openModal() {
+            modal.style.display = 'flex';
+            // Prevent body scrolling when modal is open
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+            // Re-enable body scrolling
+            document.body.style.overflow = 'auto';
+        }
         
+        // Close modal when clicking outside of the white box
         window.onclick = function(event) {
-            let modal = document.getElementById('calendarModal');
             if (event.target == modal) {
-                modal.style.display = "none";
+                closeModal();
             }
         }
     </script>
