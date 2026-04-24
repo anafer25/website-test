@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syntropic Minds | Math & Physics Mentoring</title>
+    <title>Syntropic Minds | Ana Rodriguez Mentoring</title>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
@@ -285,4 +285,67 @@
             <a href="#about">About</a>
             <a href="#curriculum">Curriculum</a>
             <a href="#pricing">Pricing</a>
-            <a href="#contact
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <p style="text-transform: uppercase; letter-spacing: 2px; color: var(--gold); font-weight: 600; margin-bottom: 1rem;">Ana Rodriguez Mentoring</p>
+        <h1>Integrate Calculus <br>with <span>Intuition.</span></h1>
+        <p>Welcome to Syntropic Minds. We go beyond rote memorization to help you master the language of the universe through personalized mentoring in Math and Physics.</p>
+        <div>
+            <button class="btn-primary" onclick="openModal()">Book a Session</button>
+            <a href="#pricing" class="btn-secondary">View Group Rates</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="bio-content">
+            <span class="bio-title">Tutor Bio</span>
+            <h2>Ana Rodriguez</h2>
+            <p style="margin: 1rem 0; font-size: 1.1rem; color: var(--blue-deep);">
+                <strong>Bachelor’s In Science in Astrophysics with a minor in Mathematics</strong><br>
+                Bishop’s University | Sherbrooke, Canada.
+            </p>
+            <p style="color: var(--text-muted); font-size: 1.05rem;">
+                I’ve guided and mentored students in interactive, inquiry-based precalculus and calculus courses through the Maple League OLTC program, helping them build confidence, collaboration, and problem-solving skills.
+            </p>
+        </div>
+    </section>
+
+    <section id="curriculum">
+        <h2 class="text-center" style="font-size: 2.5rem; margin-bottom: 1rem;">The Curriculum</h2>
+        <p class="text-center" style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">Tailored academics designed to build confidence, deep understanding, and intuition.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>Precalculus</h3>
+                <p>Building the foundation. We focus on functions, trigonometry, and algebraic fluency, ensuring you are fully prepared for the rigors of higher-level math without the anxiety.</p>
+            </div>
+            <div class="card" style="border-top-color: var(--gold);">
+                <h3 style="color: var(--gold);">Calculus</h3>
+                <p>The mathematics of change. Whether it’s AB/BC or university-level, we break down limits, derivatives, and integrals into visual, intuitive concepts that finally "click".</p>
+            </div>
+            <div class="card" style="border-top-color: var(--blue-deep);">
+                <h3 style="color: var(--blue-deep);">Mechanics</h3>
+                <p>The laws of motion. From kinematics to rotational dynamics, we apply mathematical frameworks to physical realities, turning complex word problems into solvable puzzles.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <h2 class="text-center" style="font-size: 2.5rem; margin-bottom: 1rem;">Pricing & Booking</h2>
+        <p class="text-center" style="color: var(--text-muted);">Affordable support for your academic journey.</p>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Private Session</h3>
+                <div class="price-value">$20</div>
+                <p style="color: var(--text-muted);">per hour</p>
+                <button class="btn-primary" style="margin-top: 1.5rem; width: 100%;" onclick="openModal()">Book Private</button>
+            </div>
+            <div class="price-card" style="border-top-color: var(--turquoise);">
+                <h3>Group Session</h3>
+                <div class="price-value">$15</div>
+                <p style="color: var(--text-muted);">per person / hour</p>
+                <button class="btn-secondary" style="margin-top: 1.5rem; width: 100%; margin-left: 0;" onclick="openModal()">Book Group</button>
+            </div>
