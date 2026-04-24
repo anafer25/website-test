@@ -255,21 +255,24 @@
         }
         .modal-content {
             background: white;
-            padding: 3rem;
+            padding: 2rem;
             border-radius: 16px;
-            width: 90%;
-            max-width: 600px;
+            width: 95%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
             text-align: center;
             position: relative;
         }
         .close-btn {
             position: absolute;
-            top: 1.5rem; right: 1.5rem;
-            font-size: 1.5rem;
+            top: 1rem; right: 1rem;
+            font-size: 2rem;
             cursor: pointer;
             color: var(--text-muted);
             border: none;
             background: none;
+            z-index: 10;
         }
     </style>
 </head>
@@ -282,113 +285,4 @@
             <a href="#about">About</a>
             <a href="#curriculum">Curriculum</a>
             <a href="#pricing">Pricing</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <section id="home" class="hero">
-        <h1>Integrate Calculus <br>with <span>Intuition.</span></h1>
-        <p>Welcome to Syntropic Minds. We go beyond rote memorization to help you master the language of the universe through personalized mentoring in Math and Physics.</p>
-        <div>
-            <button class="btn-primary" onclick="openModal()">Book a Session</button>
-            <a href="#pricing" class="btn-secondary">View Group Rates</a>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="bio-content">
-            <span class="bio-title">Tutor Bio</span>
-            <h2>Meet Your Mentor</h2>
-            <p style="margin: 1.5rem 0; font-size: 1.1rem;">
-                <strong>Bachelor’s In Science in Astrophysics</strong> with a minor in Mathematics.<br>
-                Bishop’s University | Sherbrooke, Canada.
-            </p>
-            <p style="color: var(--text-muted);">
-                I’ve guided and mentored students in interactive, inquiry-based precalculus and calculus courses through the Maple League OLTC program, helping them build confidence, collaboration, and problem-solving skills. My approach focuses on making complex concepts accessible and engaging for every learner.
-            </p>
-        </div>
-    </section>
-
-    <section id="curriculum">
-        <h2 class="text-center" style="font-size: 2.5rem; margin-bottom: 1rem;">The Curriculum</h2>
-        <p class="text-center" style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">Tailored academics designed to build confidence, deep understanding, and intuition.</p>
-        
-        <div class="grid">
-            <div class="card">
-                <h3>Precalculus</h3>
-                <p>Building the foundation. We focus on functions, trigonometry, and algebraic fluency, ensuring you are fully prepared for the rigors of higher-level math without the anxiety.</p>
-            </div>
-            <div class="card" style="border-top-color: var(--gold);">
-                <h3 style="color: var(--gold);">Calculus</h3>
-                <p>The mathematics of change. Whether it’s AB/BC or university-level, we break down limits, derivatives, and integrals into visual, intuitive concepts that finally "click".</p>
-            </div>
-            <div class="card" style="border-top-color: var(--blue-deep);">
-                <h3 style="color: var(--blue-deep);">Mechanics</h3>
-                <p>The laws of motion. From kinematics to rotational dynamics, we apply mathematical frameworks to physical realities, turning complex word problems into solvable puzzles.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="pricing">
-        <h2 class="text-center" style="font-size: 2.5rem; margin-bottom: 1rem;">Pricing & Booking</h2>
-        <p class="text-center" style="color: var(--text-muted);">Affordable, high-quality support for your academic journey.</p>
-        <div class="pricing-grid">
-            <div class="price-card">
-                <h3>Private Session</h3>
-                <div class="price-value">$20</div>
-                <p style="color: var(--text-muted);">per hour</p>
-                <button class="btn-primary" style="margin-top: 1.5rem; width: 100%;" onclick="openModal()">Book Private</button>
-            </div>
-            <div class="price-card" style="border-top-color: var(--turquoise);">
-                <h3>Group Session</h3>
-                <div class="price-value">$15</div>
-                <p style="color: var(--text-muted);">per person / hour</p>
-                <button class="btn-secondary" style="margin-top: 1.5rem; width: 100%; margin-left: 0;" onclick="openModal()">Book Group</button>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="text-center">
-        <h2>Get in Touch</h2>
-        <p style="color: var(--text-muted); margin-bottom: 2rem;">Have questions? Reach out directly via email or social media.</p>
-        <a href="mailto:syntropicminds@gmail.com" style="font-size: 1.5rem; color: var(--blue-deep); text-decoration: none; font-weight: 600;">syntropicminds@gmail.com</a>
-        
-        <div class="social-links">
-            <a href="https://instagram.com/syntropicminds" target="_blank">Instagram</a>
-            <a href="https://tiktok.com/@syntropicminds8" target="_blank">TikTok</a>
-            <a href="https://youtube.com/@syntropicminds8" target="_blank">YouTube</a>
-        </div>
-    </section>
-
-    <div class="modal-overlay" id="calendarModal">
-        <div class="modal-content">
-            <button class="close-btn" onclick="closeModal()">&times;</button>
-            <h2>Schedule Your Session</h2>
-            <p style="margin-bottom: 2rem; color: var(--text-muted);">Choose a time that works for you. All sessions are hosted via Zoom.</p>
-            <div style="background: var(--bg-light); border: 2px dashed var(--turquoise); padding: 4rem 2rem; border-radius: 8px;">
-                <p style="color: var(--turquoise); font-weight: 500;">[ Calendly / Scheduler Embed Goes Here ]</p>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <div class="logo" style="font-size: 1.5rem;">Syntropic<span>Minds</span></div>
-        <div style="color: var(--text-muted); font-size: 0.9rem;">
-            Syntropic Minds Mentoring. 
-        </div>
-    </footer>
-
-    <script>
-        function openModal() { document.getElementById('calendarModal').style.display = 'flex'; }
-        function closeModal() { document.getElementById('calendarModal').style.display = 'none'; }
-        
-        // Close modal when clicking outside of content
-        window.onclick = function(event) {
-            let modal = document.getElementById('calendarModal');
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
-</body>
-</html>
+            <a href="#contact
